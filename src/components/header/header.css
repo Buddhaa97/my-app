@@ -1,0 +1,12 @@
+.menu-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 10px; /* Adjust the value to control the spacing between list items */
+}
