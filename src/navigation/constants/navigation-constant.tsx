@@ -12,10 +12,6 @@ export const ROUTE_CONSTANT: NavigationModel[] = [
     page: About
   }
   // {
-  //     name: '/counter',
-  //     page: Counter,
-  // },
-  // {
   //     name: '*',
   //     page: Error,
   // },

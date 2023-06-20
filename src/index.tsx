@@ -1,5 +1,7 @@
 import React from 'react';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+import { Provider } from 'react-redux';
+import store from './redux/store';
 // import { Provider } from 'react-redux';
 import { createRoot } from 'react-dom/client';
 import './index.css';
@@ -7,7 +9,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const client = new ApolloClient({
-  uri: 'http://localhost:4000/',
+  uri: 'http://localhost:8000/',
   cache: new InMemoryCache()
 });
 
@@ -16,9 +18,11 @@ const root = createRoot(container);
 
 root.render(
   <React.StrictMode>
-    <ApolloProvider client={client}>
-      <App />
-    </ApolloProvider>
+    <Provider store={store}>
+      <ApolloProvider client={client}>
+        <App />
+      </ApolloProvider>
+    </Provider>
   </React.StrictMode>
 );
 
